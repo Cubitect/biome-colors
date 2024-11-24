@@ -276,9 +276,9 @@ birch_forest
 G#88BB67
 F#6bA941
 W#3F76E4
-26 grass_block_top.png
-8 birch_log.png
-56 birch_leaves.png
+25 grass_block_top.png
+10 birch_log.png
+55 birch_leaves.png
 2 bee_nest_side.png
 2 rose_bush_top.png
 2 lilac_top.png
@@ -574,8 +574,8 @@ ice_spikes
 G#80B497
 F#60A17B
 W#3F76E4
-55 packed_ice.png
-35 snow.png
+70 packed_ice.png
+20 snow.png
 5 dirt.png
 5 ice.png
 
@@ -584,9 +584,9 @@ old_growth_birch_forest
 G#88BB67
 F#6BA941
 W#3F76E4
-24 grass_block_top.png
-12 birch_log.png
-54 birch_leaves.png
+23 grass_block_top.png
+14 birch_log.png
+53 birch_leaves.png
 2 bee_nest_side.png
 2 rose_bush_top.png
 2 lilac_top.png

@@ -18,7 +18,7 @@ and was inspired by the [Minecraft Wiki](https://minecraft.wiki/w/Biome) page fo
 The contribution factor for each block is loosely based on the abundance of the blocks in that biome.
 However, the values are a degree of freedom that I've often adjusted to achive certain results.
 
-The biome color is then determined by a weighted average (the mean value in the [CIELUV](https://en.wikipedia.org/wiki/CIELUV) colorspace)
+The biome color is then determined by a weighted average (the mean value in the [Oklab](https://bottosson.github.io/posts/oklab/) colorspace)
 of the sample colors. Some of the biome variants have a block palette that is too similar to the main biome to use this process,
 and instead apply a small offset in lightness to the main biome color.
 
@@ -35,7 +35,7 @@ These are located at `/assets/minecraft/textures/block` inside the Minecraft Jar
 You can then run the `biome_samples.py` script, specifying the directory of the block assets as the first argument and the number of color-optimization passes you want to apply as the second argument.
 
 E.g.:
-```bash
-biomes_samples.py ./block/ 50
+```
+biomes_samples.py ./block/ 20
 ```
 

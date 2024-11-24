@@ -1,9 +1,27 @@
 from PIL import Image, ImageOps
-from skimage.color import rgb2luv, luv2rgb
 from scipy.spatial import Delaunay
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
+
+# The colorspace should have lightness [0, 1] as the first coordinate.
+# Euclidean distance should correspond to visual difference.
+if False:
+    from skimage.color import rgb2luv, luv2rgb
+    def rgb2col(rgb):
+        return np.asarray(rgb2luv(rgb)) / 100
+
+    def col2rgb(col):
+        return luv2rgb(np.asarray(col) * 100)
+else:
+    import colour
+    def rgb2col(rgb):
+        xyz = colour.sRGB_to_XYZ(rgb)
+        return colour.XYZ_to_Oklab(xyz)
+
+    def col2rgb(col):
+        xyz = colour.Oklab_to_XYZ(col)
+        return np.clip(colour.XYZ_to_sRGB(xyz), 0, 1)
 
 grasses = [
     'grass_block_top.png',
@@ -30,25 +48,25 @@ class Color:
     def __init__(self, weight, rgb, multiplier = 1.0):
         self.weight = weight
         self.rgb = np.asarray(rgb) * multiplier
-        self.luv = rgb2luv(self.rgb)
+        self.col = rgb2col(self.rgb)
 
     def __repr__(self):
         return '{{{}x#{}}}'.format(self.weight, to_hex(self.rgb))
 
-    def modified(self, col):
-        #col = np.multiply(self.rgb, col)
-        col = np.clip(self.luv[0] * 0.01 * col, 0, 1)
-        return Color(self.weight, col)
+    def modified(self, rgb):
+        rgb = np.multiply(self.rgb, rgb)
+        #rgb = np.clip(self.col[0] * rgb, 0, 1)
+        return Color(self.weight, rgb)
 
 
 class Biome:
     def __init__(self):
         self.id = -1
-        self.luv = ()
+        self.col = ()
         self.bounds = []
         self.space = None
         self.path = []
-    
+
     def setup(self, lines, assetpath):
         self.id = int(lines[0])
         icons = []
@@ -101,21 +119,21 @@ class Biome:
         bounds = set()
         for cols in icons:
             for c in cols:
-                total += c.luv * c.weight
+                total += c.col * c.weight
                 weight += c.weight
-                bounds.add(tuple(c.luv))
-        self.luv = total / weight
+                bounds.add(tuple(c.col))
+        self.col = total / weight
         # construct the interpolatable color space
         self.bounds = list(bounds)
         self.space = Delaunay(self.bounds)
         return self
 
     def create_variant(self, biome, dlight):
-        dluv = (dlight, 0, 0)
+        dcol = (1 + dlight, 1, 1)
         b = Biome()
         b.id = biome
-        b.luv = self.luv + dluv
-        b.bounds = [c + dluv for c in self.bounds]
+        b.col = np.multiply(self.col, dcol)
+        b.bounds = [np.multiply(c, dcol) for c in self.bounds]
         b.space = Delaunay(self.bounds)
         b.path = []
         return b
@@ -136,9 +154,9 @@ def load(path, assetpath):
             lines.append(l)
 
     # some variants are too similar to distinguish by block samples
-    hills = -3.5
-    modified = 3.5
-    
+    hills = -0.075
+    modified = +0.075
+
     # Note:
     # tall_birch_forest               = birch_forest+128,
     # tall_birch_hills                = birch_forest_hills+128,
@@ -177,53 +195,56 @@ def load(path, assetpath):
 
 
 def gradient(biomes, b1):
-    luv = biomes[b1].luv
+    col = biomes[b1].col
     total = np.zeros(3)
     for b2 in biomes.keys():
         if b1 == b2:
             continue
         # determine difference of colors, giving more importance to lightness
-        l,u,v = d = luv - biomes[b2].luv
-        w = 4*l*l + u*u + v*v
-        total += d / (0.01 + w)
+        l,a,b = d = col - biomes[b2].col
+        w = 2*l*l + a*a + b*b + 1e-6
+        total += d / w
     return total
 
 def optimize(biomes):
     for name,b in biomes.items():
         b.grad = gradient(biomes, name)
-    step = 0.25 / max(np.linalg.norm(b.grad) for b in biomes.values())
+    step = 0.001
+    step /= max(np.linalg.norm(b.grad) for b in biomes.values())
     for b in biomes.values():
-        new = b.luv + b.grad * step
+        new = b.col + b.grad * step
         # only allow changes that interpolate between the sample colors
         if b.space.find_simplex(new) >= 0:
-            b.path.append(tuple(b.luv))
-            b.luv = new
+            b.path.append(tuple(b.col))
+            b.col = new
 
 def plot(biomes):
-    n = len(biomes)
-    cols = [luv2rgb(b.luv) for b in biomes.values()]
-    L = [b.luv[0] for b in biomes.values()]
-    U = [b.luv[1] for b in biomes.values()]
-    V = [b.luv[2] for b in biomes.values()]
+    names = sorted(biomes.keys())
+    biomes = [biomes[n] for n in names]
+
+    rgb = [col2rgb(b.col) for b in biomes]
+    L = [b.col[0] for b in biomes]
+    A = [b.col[1] for b in biomes]
+    B = [b.col[2] for b in biomes]
 
     #plt.style.use('dark_background')
     ax = plt.figure().add_subplot(111, projection='3d')
-    ax.scatter(L, U, V, s=28, c=[(0,0,0)]*n, lw=0)
-    ax.scatter(L, U, V, s=24, c=cols, lw=0)
+    ax.scatter(L, A, B, s=28, c=[(0,0,0)]*len(L), lw=0)
+    ax.scatter(L, A, B, s=24, c=rgb, lw=0)
 
-    for i,b in enumerate(biomes.values()):
+    for i,b in enumerate(biomes):
         if len(b.path):
-            c = luv2rgb(b.path[0])
-            l = [p[0] for p in b.path]
-            u = [p[1] for p in b.path]
-            v = [p[2] for p in b.path]
-            ax.plot(l, u, v, linewidth=1.25, color=(0,0,0))
-            ax.plot(l, u, v, linewidth=1.0, color=c)
-        ax.text(L[i], U[i], V[i], b.id)
+            col = col2rgb(b.path[0])
+            L2 = [p[0] for p in b.path]
+            a2 = [p[1] for p in b.path]
+            b2 = [p[2] for p in b.path]
+            ax.plot(L2, a2, b2, linewidth=1.25, color=(0,0,0))
+            ax.plot(L2, a2, b2, linewidth=1.0, color=col)
+        ax.text(L[i], A[i], B[i], b.id)
 
     ax.set_xlabel('L')
-    ax.set_ylabel('u')
-    ax.set_zlabel('v')
+    ax.set_ylabel('a')
+    ax.set_zlabel('b')
     plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
     plt.show()
 
@@ -240,7 +261,7 @@ if __name__ == '__main__':
         optimize(biomes)
 
     for name in sorted(biomes.keys()):
-        print (name, to_hex(luv2rgb(biomes[name].luv)))
+        print (name, to_hex(col2rgb(biomes[name].col)))
 
     plot(biomes)
 
