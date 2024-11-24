@@ -50,13 +50,13 @@ old_growth_pine_taiga #3c3c25
 old_growth_spruce_taiga #403c25
 pale_garden #555751
 plains #536b32
-rainforest #4c6639
+rainforest #204f13
 river #45608c
 savanna #66612d
 savanna_plateau #716c37
-seasonal_forest #45551f
+seasonal_forest #325616
 shattered_savanna_plateau #776c4c
-shrubland #5e5f42
+shrubland #515a2e
 snowy_beach #d5dde2
 snowy_mountains #adb6b6
 snowy_plains #c1caca

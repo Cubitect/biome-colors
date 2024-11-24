@@ -489,31 +489,31 @@ seasonal_forest
 51
 G#75c440
 F#54b512
-grass_block_top.png
-oak_leaves.png
-oak_log.png
+50 grass_block_top.png
+45 oak_leaves.png
+5 oak_log.png
 
 rainforest
 52
 G#48cd33
 F#1dbf01
-grass_block_top.png
-oak_leaves.png
-birch_leaves.png
-oak_log.png
-birch_log.png
-short_grass.png
-fern.png
+30 grass_block_top.png
+50 oak_leaves.png
+10 birch_leaves.png
+4 oak_log.png
+2 birch_log.png
+2 short_grass.png
+2 fern.png
 
 shrubland
 53
 G#a5b962
 F#8fa63a
-grass_block_top.png
-oak_leaves.png
-birch_leaves.png
-oak_log.png
-birch_log.png
+60 grass_block_top.png
+20 oak_leaves.png
+5 birch_leaves.png
+4 oak_log.png
+1 birch_log.png
 
 sunflower_plains
 129

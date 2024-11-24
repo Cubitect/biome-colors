@@ -1,8 +1,8 @@
 # Biome Colors from Block Samples
 
 Many Minecraft biome mapping tools currently use colormaps that are based on the [AMIDST project](https://github.com/toolbox4minecraft/amidst),
-which has not been updated to the 1.18 world generation. Also there is not a clear, systematic method of expanding AMIDST's colormap,
-as the colors are only vaguely based on the in-game appearance of the biomes.
+which has not been updated to the 1.18 world generation, and there isn't a clear, systematic method of expanding the colormap,
+since the colors are not directly based on the in-game appearance of the biomes.
 Because of this, projects have diverged with the colormaps they use.
 
 This repo makes an attempt to create a new biome colormap that is based on the characteristic blocks that can be found in those biomes.
@@ -18,11 +18,12 @@ and was inspired by the [Minecraft Wiki](https://minecraft.wiki/w/Biome) page fo
 The contribution factor for each block is loosely based on the abundance of the blocks in that biome.
 However, the values are a degree of freedom that I've often adjusted to achive certain results.
 
-The biome color is then determined by a weighted average (the mean value in the [Oklab](https://bottosson.github.io/posts/oklab/) colorspace)
-of the sample colors. Some of the biome variants have a block palette that is too similar to the main biome to use this process,
+The biome color is then determined by a weighted average of the sample colors
+(their mean value in the [Oklab](https://bottosson.github.io/posts/oklab/) colorspace).
+Some of the biome variants have a block palette that is too similar to the main biome to use this process,
 and instead apply a small offset in lightness to the main biome color.
 
-After the average colors are detemined, the contrast between some of the biomes may be a little low.
+After the average colors are determined, the contrast between some of the biomes may be a little low.
 To improve open this, one can apply optimization passes, which nudge the biome colors so that they become more distinct.
 This movement is constrained to the interpolated colorspace of the sample colors.
 
