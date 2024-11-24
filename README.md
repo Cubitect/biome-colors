@@ -11,6 +11,17 @@ The results can be seen in [sampled_colormap.txt](sampled_colormap.txt) and [sam
 and can be loaded in [Cubiomes Viewer](https://github.com/Cubitect/cubiomes-viewer).
 
 
+## Screenshots
+
+Here are a couple of examples, comparing the new sampled colormap to [Chunkbases's](https://www.chunkbase.com), which is based on AMIDST.
+
+![Minecraft 1.17, Seed 2819277292818](mc17_2819277292818.png
+"Minecraft 1.17, Seed 2819277292818, Chunkbase (left) vs Sampled (right)")
+
+![Minecraft 1.21, Seed 1642716](mc21_1642716.png
+"Minecraft 1.21, Seed 1642716, Chunkbase (left) vs Sampled (right)")
+
+
 ## Generation Process
 
 The selection of sampled blocks and their contributions is specified in [biome_blocks.txt](biome_blocks.txt)
