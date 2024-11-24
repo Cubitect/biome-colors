@@ -1,0 +1,839 @@
+ocean
+0
+G#8EB971
+F#71A74D
+W#3F76E4
+60 water_overlay.png
+15 gravel.png
+5 sand.png
+5 dirt.png
+5 clay.png
+5 seagrass.png
+5 kelp.png
+
+plains
+1
+G#91BD59
+F#77AB2F
+W#3F76E4
+85 grass_block_top.png
+5 tall_grass_top.png
+1 oak_log.png
+5 oak_leaves.png
+1 bee_nest_side.png
+1 azure_bluet.png
+1 oxeye_daisy.png
+1 cornflower.png
+
+desert
+2
+G#BFB755
+F#AEA42A
+W#3F76E4
+85 sand.png
+5 sandstone.png
+5 cactus_side.png
+5 dead_bush.png
+
+windswept_hills
+3
+G#8AB689
+F#6DA36B
+W#3F76E4
+45 grass_block_top.png
+5 oak_log.png
+5 oak_leaves.png
+5 spruce_log.png
+5 spruce_leaves.png
+15 snow.png
+15 stone.png
+1 emerald_ore.png
+2 coal_ore.png
+2 iron_ore.png
+
+forest
+4
+G#79C05A
+F#59AE30
+W#3F76E4
+40 grass_block_top.png
+6 oak_log.png
+30 oak_leaves.png
+3 birch_log.png
+10 birch_leaves.png
+2 bee_nest_side.png
+2 rose_bush_top.png
+2 lilac_top.png
+2 peony_top.png
+2 lily_of_the_valley.png
+
+taiga
+5
+G#86B783
+F#68A464
+W#3F76E4
+30 grass_block_top.png
+3 short_grass.png
+5 fern.png
+5 large_fern_top.png
+2 sweet_berry_bush_stage3.png
+15 spruce_log.png
+40 spruce_leaves.png
+
+swamp
+6
+G#6A7039
+H#4C763C
+F#6A7039
+W#617B64
+25 grass_block_top.png
+25 water_overlay.png
+4 lily_pad.png
+4 clay.png
+4 vine.png
+4 oak_log.png
+12 oak_leaves.png
+10 blue_orchid.png
+2 brown_mushroom.png
+2 dead_bush.png
+8 seagrass.png
+
+river
+7
+G#8EB971
+F#71A74D
+W#3F76E4
+70 water_overlay.png
+8 grass_block_top.png
+5 dirt.png
+5 clay.png
+5 sand.png
+5 gravel.png
+1 sugar_cane.png
+1 seagrass.png
+
+frozen_ocean
+10
+G#80B497
+F#60A17B
+W#3938C9
+30 water_overlay.png
+30 ice.png
+15 snow.png
+15 packed_ice.png
+5 blue_ice.png
+4 gravel.png
+2 sand.png
+2 clay.png
+2 dirt.png
+
+frozen_river
+11
+G#80B497
+F#60A17B
+W#3938C9
+70 ice.png
+5 water_overlay.png
+5 grass_block_top.png
+5 dirt.png
+5 clay.png
+5 sand.png
+5 gravel.png
+
+snowy_plains
+12
+G#80B497
+F#60A17B
+W#3F76E4
+72 snow.png
+6 grass_block_top.png
+6 ice.png
+4 spruce_log.png
+12 spruce_leaves.png
+
+mushroom_fields
+14
+G#55C93F
+F#2BBB0F
+W#3F76E4
+50 mycelium_top.png
+20 red_mushroom_block.png
+20 brown_mushroom_block.png
+6 mushroom_stem.png
+2 red_mushroom.png
+2 brown_mushroom.png
+
+mushroom_field_shore
+15
+G#55C93F
+F#2BBB0F
+W#3F76E4
+20 water_overlay.png
+30 mycelium_top.png
+20 red_mushroom_block.png
+20 brown_mushroom_block.png
+6 mushroom_stem.png
+2 red_mushroom.png
+2 brown_mushroom.png
+
+beach
+16
+G#91BD59
+F#77AB2F
+W#3F76E4
+20 water_overlay.png
+70 sand.png
+6 sandstone.png
+1 gravel.png
+1 dirt.png
+1 clay.png
+1 sugar_cane.png
+
+mountain_edge
+20
+G#8AB689
+F#6DA36B
+W#3F76E4
+grass_block_top.png
+oak_log.png
+oak_leaves.png
+spruce_log.png
+spruce_leaves.png
+snow.png
+stone.png
+emerald_ore.png
+coal_ore.png
+iron_ore.png
+
+jungle
+21
+G#59C93C
+F#30BB0B
+W#3F76E4
+20 grass_block_top.png
+3 fern.png
+10 vine.png
+5 jungle_log.png
+40 jungle_leaves.png
+1 cocoa_stage2.png
+2 oak_log.png
+15 oak_leaves.png
+2 melon_side.png
+2 bamboo_stalk.png
+
+sparse_jungle
+23
+G#64C73F
+F#3EB80F
+W#3F76E4
+65 grass_block_top.png
+5 vine.png
+5 jungle_log.png
+10 jungle_leaves.png
+1 cocoa_stage2.png
+2 oak_log.png
+10 oak_leaves.png
+2 melon_side.png
+
+deep_ocean
+24
+G#8EB971
+F#71A74D
+W#3F76E4
+70 water_overlay.png
+20 gravel.png
+5 seagrass.png
+5 kelp.png
+
+stony_shore
+25
+G#8AB689
+F#6DA36B
+W#3F76E4
+20 water_overlay.png
+60 stone.png
+5 gravel.png
+5 andesite.png
+5 diorite.png
+5 granite.png
+
+snowy_beach
+26
+G#83B593
+F#64A278
+W#3D57D6
+2 water_overlay.png
+50 snow.png
+20 ice.png
+20 sand.png
+5 sandstone.png
+1 gravel.png
+1 dirt.png
+1 clay.png
+
+birch_forest
+27
+G#88BB67
+F#6bA941
+W#3F76E4
+26 grass_block_top.png
+8 birch_log.png
+56 birch_leaves.png
+2 bee_nest_side.png
+2 rose_bush_top.png
+2 lilac_top.png
+2 peony_top.png
+2 lily_of_the_valley.png
+
+dark_forest
+29
+G#507A32
+F#59AE30
+W#3F76E4
+30 grass_block_top.png
+5 dark_oak_log.png
+40 dark_oak_leaves.png
+2 birch_log.png
+3 birch_leaves.png
+2 oak_log.png
+3 oak_leaves.png
+3 red_mushroom_block.png
+3 brown_mushroom_block.png
+3 mushroom_stem.png
+1 red_mushroom.png
+1 brown_mushroom.png
+1 rose_bush_top.png
+1 peony_top.png
+1 lilac_top.png
+1 lily_of_the_valley.png
+
+snowy_taiga
+30
+G#80B497
+F#60A17B
+W#3D57D6
+25 grass_block_top.png
+25 snow.png
+3 short_grass.png
+5 fern.png
+1 sweet_berry_bush_stage3.png
+1 large_fern_top.png
+10 spruce_log.png
+30 spruce_leaves.png
+
+old_growth_pine_taiga
+32
+G#86B87F
+F#68A55F
+W#3F76E4
+12 grass_block_top.png
+12 podzol_top.png
+12 coarse_dirt.png
+5 mossy_cobblestone.png
+10 spruce_log.png
+40 spruce_leaves.png
+5 fern.png
+2 large_fern_top.png
+2 dead_bush.png
+
+windswept_forest
+34
+G#8AB689
+F#6DA36B
+W#3F76E4
+45 grass_block_top.png
+5 oak_log.png
+15 oak_leaves.png
+5 spruce_log.png
+15 spruce_leaves.png
+5 snow.png
+5 stone.png
+1 emerald_ore.png
+2 coal_ore.png
+2 iron_ore.png
+
+savanna
+35
+G#bfb755
+F#AEA42A
+W#3F76E4
+84 grass_block_top.png
+2 tall_grass_top.png
+2 acacia_log.png
+8 acacia_leaves.png
+1 oak_log.png
+4 oak_leaves.png
+
+badlands
+37
+G#90814D
+F#9E814D
+W#3F76E4
+65 red_sand.png
+2 red_sandstone.png
+25 terracotta.png
+2 cactus_side.png
+5 dead_bush.png
+1 gold_ore.png
+
+wooded_badlands
+38
+G#90814D
+F#9E814D
+W#3F76E4
+8 red_sand.png
+1 red_sandstone.png
+55 terracotta.png
+2 cactus_side.png
+5 dead_bush.png
+8 grass_block_top.png
+8 coarse_dirt.png
+2 oak_log.png
+10 oak_leaves.png
+1 gold_ore.png
+
+badlands_plateau
+39
+G#90814D
+F#9E814D
+W#3F76E4‌
+10 red_sand.png
+83 terracotta.png
+1 cactus_side.png
+6 dead_bush.png
+1 gold_ore.png
+
+warm_ocean
+44
+G#8EB971
+F#71A74D
+W#43D5EE
+55 water_overlay.png
+15 sand.png
+5 brain_coral.png
+5 bubble_coral.png
+5 fire_coral.png
+5 horn_coral.png
+5 tube_coral.png
+3 sea_pickle.png
+2 seagrass.png
+
+lukewarm_ocean
+45
+G#8EB971
+F#71A74D
+W#45ADF2
+60 water_overlay.png
+15 sand.png
+5 dirt.png
+5 clay.png
+5 gravel.png
+5 seagrass.png
+5 kelp.png
+
+cold_ocean
+46
+G#8EB971
+F#71A74D
+W#3D57D6
+60 water_overlay.png
+15 gravel.png
+5 dirt.png
+5 sand.png
+5 clay.png
+5 seagrass.png
+5 kelp.png
+
+deep_warm_ocean
+47
+G#8EB971
+F#71A74D
+W#43D5EE
+80 water_overlay.png
+10 sand.png
+5 obsidian.png
+5 seagrass.png
+
+deep_lukewarm_ocean
+48
+G#8EB971
+F#71A74D
+W#45ADF2
+70 water_overlay.png
+10 sand.png
+5 seagrass.png
+5 kelp.png
+
+deep_cold_ocean
+49
+G#8EB971
+F#71A74D
+W#3D57D6
+70 water_overlay.png
+20 gravel.png
+5 seagrass.png
+5 kelp.png
+
+deep_frozen_ocean
+50
+G#8EB971
+F#71A74D
+W#3938C9
+50 water_overlay.png
+20 snow.png
+20 packed_ice.png
+5 blue_ice.png
+5 gravel.png
+
+seasonal_forest
+51
+G#75c440
+F#54b512
+grass_block_top.png
+oak_leaves.png
+oak_log.png
+
+rainforest
+52
+G#48cd33
+F#1dbf01
+grass_block_top.png
+oak_leaves.png
+birch_leaves.png
+oak_log.png
+birch_log.png
+short_grass.png
+fern.png
+
+shrubland
+53
+G#a5b962
+F#8fa63a
+grass_block_top.png
+oak_leaves.png
+birch_leaves.png
+oak_log.png
+birch_log.png
+
+sunflower_plains
+129
+G#91BD59
+F#77AB2F
+W#3F76E4
+60 grass_block_top.png
+5 tall_grass_top.png
+25 sunflower_front.png
+1 oak_log.png
+5 oak_leaves.png
+1 bee_nest_side.png
+1 azure_bluet.png
+1 oxeye_daisy.png
+1 cornflower.png
+
+windswept_gravelly_hills
+131
+G#8AB689
+F#6DA36B
+W#3F76E4
+40 gravel.png
+35 grass_block_top.png
+15 snow.png
+5 stone.png
+1 emerald_ore.png
+2 coal_ore.png
+2 iron_ore.png
+
+flower_forest
+132
+G#79C05A
+F#59AE30
+W#3F76E4
+22 grass_block_top.png
+8 oak_log.png
+24 oak_leaves.png
+4 birch_log.png
+12 birch_leaves.png
+2 bee_nest_side.png
+2 allium.png
+2 azure_bluet.png
+2 cornflower.png
+2 dandelion.png
+2 lily_of_the_valley.png
+2 oxeye_daisy.png
+2 poppy.png
+2 orange_tulip.png
+2 pink_tulip.png
+2 red_tulip.png
+2 white_tulip.png
+2 lilac_top.png
+2 peony_top.png
+2 rose_bush_top.png
+
+ice_spikes
+140
+G#80B497
+F#60A17B
+W#3F76E4
+55 packed_ice.png
+35 snow.png
+5 dirt.png
+5 ice.png
+
+old_growth_birch_forest
+155
+G#88BB67
+F#6BA941
+W#3F76E4
+24 grass_block_top.png
+12 birch_log.png
+54 birch_leaves.png
+2 bee_nest_side.png
+2 rose_bush_top.png
+2 lilac_top.png
+2 peony_top.png
+2 lily_of_the_valley.png
+
+old_growth_spruce_taiga
+160
+G#86B783
+F#68A464
+W#3F76E4
+12 grass_block_top.png
+12 podzol_top.png
+12 coarse_dirt.png
+5 mossy_cobblestone.png
+20 spruce_log.png
+30 spruce_leaves.png
+5 fern.png
+2 large_fern_top.png
+2 dead_bush.png
+
+windswept_savanna
+163
+G#BFB755
+F#AEA42A
+W#3F76E4
+40 grass_block_top.png
+24 coarse_dirt.png
+22 stone.png
+2 acacia_log.png
+8 acacia_leaves.png
+1 oak_log.png
+3 oak_leaves.png
+
+eroded_badlands
+165
+G#90814D
+F#9E814D
+W#3F76E4
+18 red_sand.png
+2 red_sandstone.png
+24 terracotta.png
+8 red_terracotta.png
+8 orange_terracotta.png
+8 yellow_terracotta.png
+8 brown_terracotta.png
+8 white_terracotta.png
+8 light_gray_terracotta.png
+2 cactus_side.png
+5 dead_bush.png
+1 gold_ore.png
+
+bamboo_jungle
+168
+G#59C93C
+F#30BB0B
+W#3F76E4
+20 grass_block_top.png
+15 podzol_top.png
+20 bamboo_stalk.png
+5 vine.png
+5 jungle_log.png
+20 jungle_leaves.png
+3 oak_log.png
+10 oak_leaves.png
+2 melon_side.png
+
+dripstone_caves
+174
+G#91BD59
+F#77AB2F
+W#3F76E4
+42 dripstone_block.png
+42 pointed_dripstone_up_base.png
+15 water_overlay.png
+1 copper_ore.png
+
+lush_caves
+175
+G#8EB971
+F#71A74D
+W#3F76E4
+1 oak_log.png
+5 azalea_leaves.png
+1 flowering_azalea_leaves.png
+1 flowering_azalea_side.png
+1 rooted_dirt.png
+1 hanging_roots.png
+20 moss_block.png
+2 short_grass.png
+5 tall_grass_top.png
+1 vine.png
+10 water_overlay.png
+16 clay.png
+1 small_dripleaf_top.png
+5 big_dripleaf_top.png
+25 cave_vines.png
+5 spore_blossom.png
+
+meadow
+176
+G#83BB6D
+F#63A948
+W#0E4ECF
+75 grass_block_top.png
+1 oak_log.png
+1 oak_leaves.png
+1 birch_log.png
+1 birch_leaves.png
+1 bee_nest_side.png
+1 dandelion.png
+1 cornflower.png
+6 poppy.png
+6 allium.png
+1 oxeye_daisy.png
+1 azure_bluet.png
+1 stone.png
+1 emerald_ore.png
+1 short_grass.png
+1 tall_grass_top.png
+
+grove
+178
+G#80B497
+F#60A17B
+W#3F76E4
+40 snow.png
+10 powder_snow.png
+3 dirt.png
+10 spruce_log.png
+35 spruce_leaves.png
+1 emerald_ore.png
+1 stone.png
+
+snowy_slopes
+179
+G#80B497
+F#60A17B
+W#3F76E4
+65 snow.png
+30 powder_snow.png
+4 stone.png
+1 emerald_ore.png
+
+jagged_peaks
+180
+G#80B497
+F#60A17B
+W#3F76E4
+50 snow.png
+40 stone.png
+5 ice.png
+2 emerald_ore.png
+2 iron_ore.png
+1 diamond_ore.png
+
+frozen_peaks
+181
+G#80B497
+F#60A17B
+W#3F76E4
+38 snow.png
+20 stone.png
+20 ice.png
+20 packed_ice.png
+2 emerald_ore.png
+
+stony_peaks
+182
+G#9ABE4B
+F#82AC1E
+W#3F76E4
+70 stone.png
+20 calcite.png
+8 gravel.png
+2 emerald_ore.png
+
+deep_dark
+183
+G#91BD59
+F#77AB2F
+W#3F76E4
+60 sculk.png
+40 sculk_vein.png
+
+mangrove_swamp
+184
+G#6A7039
+H#4C763C
+F#8DB127
+W#3A7A6A
+50 mangrove_leaves.png
+4 mangrove_log.png
+4 moss_block.png
+4 mangrove_roots_side.png
+4 muddy_mangrove_roots_side.png
+8 vine.png
+1 mangrove_propagule.png
+1 bee_nest_side.png
+10 mud.png
+5 grass_block_top.png
+1 short_grass.png
+1 dead_bush.png
+4 water_overlay.png
+1 lily_pad.png
+1 seagrass.png
+
+cherry_grove
+185
+G#B6DB61
+F#B6DB61
+W#5DB7EF
+25 grass_block_top.png
+15 short_grass.png
+40 cherry_leaves.png
+8 cherry_log.png
+2 bee_nest_side.png
+10 pink_petals.png
+
+pale_garden
+186
+G#778272
+F#878D76
+W#76889D
+25 grass_block_top.png
+15 pale_oak_log.png
+30 pale_oak_leaves.png
+5 creaking_heart.png
+10 pale_moss_block.png
+5 pale_moss_carpet.png
+10 pale_hanging_moss.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
